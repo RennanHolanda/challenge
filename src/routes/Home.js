@@ -1,8 +1,6 @@
 import styles from "./Home.module.css";
-
-
-import React from "react";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 
 import { AiOutlineSearch } from "react-icons/ai";
@@ -25,9 +23,27 @@ import Foto4 from "../../src/img/foto4.svg"
 import Perfil from "../../src/img/perfil.svg"
 
 const Home = () => {
-
   const handleAlert = () => {
     {Swal.fire("Pedido Realizado com", "Sucesso", "success")}}
+
+    const [ products, setProducts ] =useState([])
+
+    useEffect(() => {
+      try {
+        fetch('http://localhost:5000/produtos', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'aplication/json'
+          },
+        })
+        .then((resp) =>resp.json())
+        .then((data) => {
+          setProducts(data)
+        })
+      } catch (error) {console.log(error)
+      }
+    }, [])
+
 
   return (
     <div className={styles.area}>
