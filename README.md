@@ -35,12 +35,11 @@ O projeto doi desenvolvido com layout deponibilizado no Figma, com a proposta de
 
 Você pode visualizar o layout do projeto através [DESSE LINK](<https://www.figma.com/file/6ICygGSzwHirUjQgLhq6px/Desafio-FrontEnd?node-id=2587%3A123>). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
 
-## Rodar 
+## 🔖 Rodar 
 
 para rodar o projeto basta seguir os seguintes comandos
 
  - npm init -y 
  - npm run backend (para rodar o json-server)
-
-  para rodar o projeto execute o comando npm start
+ - para rodar o projeto execute o comando npm start
 
