@@ -8,6 +8,7 @@ Projeto desenvolvido com JS e React
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-rodar">Rodar o projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
 <br>
@@ -28,11 +29,18 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-O projeto doi desenvolvido com layout deponibilizado no Figma, com a proposta de realizar a fifelidade do mesmo e consumir APIs.
+O projeto doi desenvolvido com layout deponibilizado no Figma, com a proposta de realizar a fidelidade do mesmo e consumir APIs.
 
 ## 🔖 Layout
 
 Você pode visualizar o layout do projeto através [DESSE LINK](<https://www.figma.com/file/6ICygGSzwHirUjQgLhq6px/Desafio-FrontEnd?node-id=2587%3A123>). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
 
-## Rodar o projeto
+## Rodar 
+
+para rodar o projeto basta seguir os seguintes comandos
+
+ - npm init -y 
+ - npm run backend (para rodar o json-server)
+
+  para rodar o projeto execute o comando npm start
 
