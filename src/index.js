@@ -8,8 +8,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import Home from "./routes/Home";
 import ErrorPage from "./routes/ErrorPage";
-import Product from "./components/Product";
-import Address from "./components/Address";
+import Product from "./components/Product/Product";
+import Address from "./components/Address/Address";
 
 const router = createBrowserRouter([
   {
