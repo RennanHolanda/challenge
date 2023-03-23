@@ -39,7 +39,7 @@ Você pode visualizar o layout do projeto através [DESSE LINK](<https://www.fig
 
 para rodar o projeto basta seguir os seguintes comandos
 
- - npm init -y 
- - npm run backend (para rodar o json-server)
- - para rodar o projeto execute o comando npm start
+- npm install    (para baixar as dependências)
+- npm run backend   (para rodar o db.json, que está rodando na porta:5000 que foi configurado no package.json)
+- npm start  (para rodar o frotend, que está rodando na porta: 3000)
 
