@@ -18,7 +18,7 @@ const Home = () => {
   useEffect(() => {
     async function loadProducts() {
       const response = await Api.get("/products");
-      console.log(response.data);
+      // console.log(response.data);
       setProducts(response.data);
     }
     loadProducts();

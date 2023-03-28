@@ -1,6 +1,6 @@
 import styles from "./Product.module.css";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Home from "../../routes/Home";
 
 import Button from "react-bootstrap/Button";
@@ -10,6 +10,9 @@ import { Link } from "react-router-dom";
 import Foto1 from "../../../src/img/foto1.svg";
 
 const Product = () => {
+
+  const numberRef = useRef(0)
+
   const [count1, setCount1] = useState(0);
   const [count2, setCount2] = useState(0);
   const [count3, setCount3] = useState(0);
@@ -17,42 +20,9 @@ const Product = () => {
   const [count5, setCount5] = useState(0);
   const [count6, setCount6] = useState(0);
 
-  const handleIncrement1 = () => {
-    setCount1(count1 + 1);
-  };
-  const handleDecrement1 = () => {
-    setCount1(count1 - 1);
-  };
-  const handleIncrement2 = () => {
-    setCount2(count2 + 1);
-  };
-  const handleDecrement2 = () => {
-    setCount2(count2 - 1);
-  };
-  const handleIncrement3 = () => {
-    setCount3(count3 + 1);
-  };
-  const handleDecrement3 = () => {
-    setCount3(count3 - 1);
-  };
-  const handleIncrement4 = () => {
-    setCount4(count4 + 1);
-  };
-  const handleDecrement4 = () => {
-    setCount4(count4 - 1);
-  };
-  const handleIncrement5 = () => {
-    setCount5(count5 + 1);
-  };
-  const handleDecrement5 = () => {
-    setCount5(count5 - 1);
-  };
-  const handleIncrement6 = () => {
-    setCount6(count6 + 1);
-  };
-  const handleDecrement6 = () => {
-    setCount6(count6 - 1);
-  };
+  useEffect (() => {
+    numberRef.current = numberRef.current + 40
+  })
 
   return (
     <div className={styles.product_id}>
@@ -90,14 +60,14 @@ const Product = () => {
                     <td className={styles.add_order}>
                       <button
                         id={styles.first_button}
-                        onClick={handleDecrement1}
+                        onClick={() => setCount1(count1 - 1)}
                       >
                         -
                       </button>
                       {count1}
                       <button
                         id={styles.second_button}
-                        onClick={handleIncrement1}
+                        onClick={() => setCount1(count1 + 1)}
                       >
                         +
                       </button>
@@ -109,14 +79,14 @@ const Product = () => {
                     <td>
                       <button
                         id={styles.first_button}
-                        onClick={handleDecrement2}
+                        onClick={() => setCount2(count2 - 1)}
                       >
                         -
                       </button>
                       {count2}
                       <button
                         id={styles.second_button}
-                        onClick={handleIncrement2}
+                        onClick={() => setCount2(count2 + 1)}
                       >
                         +
                       </button>
@@ -128,14 +98,14 @@ const Product = () => {
                     <td>
                       <button
                         id={styles.first_button}
-                        onClick={handleDecrement3}
+                        onClick={() => setCount3(count3 - 1)}
                       >
                         -
                       </button>
                       {count3}
                       <button
                         id={styles.second_button}
-                        onClick={handleIncrement3}
+                        onClick={() => setCount3(count3 + 1)}
                       >
                         +
                       </button>
@@ -147,14 +117,14 @@ const Product = () => {
                     <td>
                       <button
                         id={styles.first_button}
-                        onClick={handleDecrement4}
+                        onClick={() => setCount4(count4 - 1)}
                       >
                         -
                       </button>
                       {count4}
                       <button
                         id={styles.second_button}
-                        onClick={handleIncrement4}
+                        onClick={() => setCount4(count4 + 1)}
                       >
                         +
                       </button>
@@ -166,14 +136,14 @@ const Product = () => {
                     <td className={styles.add_order}>
                       <button
                         id={styles.first_button}
-                        onClick={handleDecrement5}
+                        onClick={() => setCount5(count5 - 1)}
                       >
                         -
                       </button>
                       {count5}
                       <button
                         id={styles.second_button}
-                        onClick={handleIncrement5}
+                        onClick={() => setCount5(count5 + 1)}
                       >
                         +
                       </button>
@@ -185,14 +155,14 @@ const Product = () => {
                     <td className={styles.add_order}>
                       <button
                         id={styles.first_button}
-                        onClick={handleDecrement6}
+                        onClick={() => setCount6(count6 - 1)}
                       >
                         -
                       </button>
                       {count6}
                       <button
                         id={styles.second_button}
-                        onClick={handleIncrement6}
+                        onClick={() => setCount6(count6 + 1)}
                       >
                         +
                       </button>
@@ -204,7 +174,7 @@ const Product = () => {
             <div id={styles.total_order}>
               <p>Valor</p>
               <p>
-                <span>R$ 40,00</span>
+                <span>R$ {numberRef.current}</span>
               </p>
             </div>
             <div id={styles.to_add}>
